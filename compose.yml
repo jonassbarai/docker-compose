@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  apache:
+    image: httpd:latest
+    container_name: meu-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./meu-site:/usr/local/apache2/htdocs
+    restart: always
